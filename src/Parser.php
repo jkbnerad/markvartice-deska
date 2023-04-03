@@ -53,15 +53,8 @@ class Parser
         return ListOfRecords::create($records);
     }
 
-    public function parseDetail(?string $html = null): Detail
+    public function parseDetail(string $html): Detail
     {
-        if ($html === null) {
-            $html = file_get_contents(self::urlList);
-            if ($html === false) {
-                throw new \RuntimeException('Cannot read url');
-            }
-        }
-
         $crawler = new Crawler($html);
         $detail = [];
         $div = $crawler->filter('div.itemboard')->getNode(0);
