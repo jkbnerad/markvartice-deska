@@ -53,6 +53,16 @@ class Parser
         return ListOfRecords::create($records);
     }
 
+    public function parseDetailByUrl(string $url): Detail
+    {
+        $html = file_get_contents($url);
+        if ($html === false) {
+            throw new \RuntimeException('Cannot read url');
+        }
+
+        return $this->parseDetail($html);
+    }
+
     public function parseDetail(string $html): Detail
     {
         $crawler = new Crawler($html);
