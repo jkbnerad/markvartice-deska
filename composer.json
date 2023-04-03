@@ -1,7 +1,7 @@
 {
   "name": "jkbnerad/markvartice-deska",
   "description": "",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "license": "MIT",
   "authors": [
     {
@@ -21,8 +21,8 @@
   },
   "require": {
     "php": ">=8.1 <8.3",
-    "symfony/dom-crawler": "6.0.*",
-    "symfony/css-selector": "6.0.*",
+    "symfony/dom-crawler": "6.2.*",
+    "symfony/css-selector": "6.2.*",
     "ext-dom": "*"
   },
   "scripts": {
